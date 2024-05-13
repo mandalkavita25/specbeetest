@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "compile-sass": "^2.0.0",
+    "express": "^4.19.2",
+    "node-sass": "^8.0.0"
+  },
+  "scripts": {
+    "scss": "node-sass --watch sass -o stylesheets",
+    "sass-dev": "sass --watch --update --style=expanded sass:css"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.0"
+  }
+}

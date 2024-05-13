@@ -1,0 +1,350 @@
+@import "base";
+
+.page-wrapper, .ui-dialog {
+  *:focus {
+    outline: none;
+    box-shadow: inherit;
+  }
+}
+.conferences {
+  h2 {
+    font-weight: $font-weight-m;
+    text-align: center;
+  }
+  .field--name-body {
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 70px;
+    color: $gray-color;
+  }
+
+  .conference__tabs {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    width: 92%;
+    margin: 0 auto;
+    padding-left: 20px;
+    border-bottom: 2px solid $base-color;
+
+    .conference__title {
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-weight: $font-weight-mx;
+      color: $base-color;
+      width: 100%;
+      text-align: center;
+      align-self: center;
+      padding-inline: 16px;
+      @media screen and (max-width: $medium-x) {
+        font-size: 1rem;
+      }
+
+      &.active {
+        position: relative;
+        cursor: pointer;
+        transform: scale(1.1);
+        color: $gray-color;
+        font-size: 1.7rem;
+        @media screen and (max-width: $medium-x) {
+          font-size: 1.2rem;
+        }
+        &::after {
+          background-image: $tab-active-arrow-img;
+          background-repeat: no-repeat;
+          position: absolute;
+          width: 30px;
+          height: 25px;
+          display: block;
+          content: ' ';
+          left: 50%;
+          bottom: -32.5px;
+          @media screen and (max-width: $large) {
+            bottom: -31px;
+          }
+          @media screen and (max-width: $medium-x) {
+            bottom: -32px;
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        color: $base-color-dark;
+        background-color: $ofwhite-color;
+      }
+    }
+  }
+
+  .conference__content {
+    display: none;
+    margin-top: 25px;
+
+    .js-carousel {
+      .slick-list {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 40px;
+      }
+
+      .slick-arrow {
+        width: 30px;
+        align-self: center;
+        color: transparent;
+        @media screen and (max-width: $tablet) {
+          display: none !important;
+        }
+      }
+      .slick-prev {
+        &::before {
+          background-image: $left-arrow-icon;
+          background-repeat: no-repeat;
+          width: 66px;
+          height: 32px;
+          display: block;
+          color: inherit;
+          content: " ";
+        }
+        &:hover, &:focus {
+          &::before {
+            background-image: $left-arrow-icon-blue;
+          }
+        }
+      }
+      .slick-next {
+        &::before {
+          background-image: $right-arrow-icon;
+          background-repeat: no-repeat;
+          width: 66px;
+          height: 32px;
+          display: block;
+          color: inherit;
+          content: " ";
+        }
+        &:hover, &:focus {
+          &::before {
+            background-image: $right-arrow-icon-blue;
+          }
+        }
+      }
+      .slick-dots {
+        li {
+          margin-inline: 8px;
+          button {
+            &::before {
+              font-size: 80px;
+              color: transparent;
+              opacity: 1;
+              border: $border-blue;
+              line-height: 24px;
+              border-radius: 50%;
+            }
+          }
+          &.slick-active {
+            button {
+              &::before {
+                color: $base-color-dark;
+                opacity: 1;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .views-row {
+      width: 361px;
+      margin:0 10px;
+      box-shadow: $box-shadow;
+      transition: $box-transition;
+      border-radius: $box-radius;
+      border-bottom: $border-gray;
+      cursor: pointer;
+
+      .views-field-field-conference-image {
+        height: 245px;
+        overflow: hidden;
+        transition: height 0.5s;
+
+        .field-content {
+          background-image: $no-content-img;                    ;
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 100%;
+          height: 100%;
+          @media screen and (max-width: $tablet) {
+            background-size: contain;
+          }
+        }
+        img {
+          width: 100%;
+          display: block;
+          min-height: 240px;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+          }
+        .price {
+          display: none;
+        }
+      }
+      .views-field-title {
+        font-size: 1.2rem;
+        font-weight: $font-weight-mx;
+        margin-left: 15px;
+        color: $gray-color;
+        padding: 15px 10px 5px 5px;
+        min-height: 60px;
+      }
+      .views-field-field-conference-tags {
+        background-image: $tag-icon;
+        white-space: nowrap;
+        width: 68%;
+        overflow: hidden;
+      }
+      .views-field-field-date {
+        background-image: $date-icon;
+      }
+      .views-field-field-place {
+        background-image: $location-icon;
+        white-space: nowrap;
+        width: 68%;
+        overflow: hidden;
+      }
+      .views-field-field-conference-tags,
+      .views-field-field-date,
+      .views-field-field-place {
+        color: $light-gray;
+        background-repeat: no-repeat;
+        background-position-x: left;
+        padding: 5px 0px 5px 35px;
+        background-position-y: 10px;
+        margin-left: 15px;
+      }
+      .views-field-field-place {
+        padding-bottom: 15px;
+      }
+      .views-field-nothing {
+        border-top: $border-gray;
+        display: none;
+        @media screen and (max-width: $tablet) {
+          display: block;
+        }
+        .field-content {
+          display: flex;
+          align-items: center;
+        }
+
+        .like {
+          background-image: $like-icon;
+          &:hover {
+            background-image: $like-icon-blue;
+          }
+        }
+        .download {
+          background-image: $download-icon;
+          &:hover {
+            background-image: $download-icon-blue;
+          }
+        }
+        .share {
+          background-image: $share-icon;
+          &:hover {
+            background-image: $share-icon-blue;
+          }
+        }
+        .like,
+        .download,
+        .share {
+          background-repeat: no-repeat;
+          background-position: center;
+          display: inline-block;
+          border-right: $border-gray;
+          padding: 10px;
+          width: 15%;
+          height: 22px;
+          @media screen and (max-width: $tablet) {
+            background-size: 20px;
+          }
+
+          span {
+            visibility: hidden;
+          }
+          a {
+            display: none;
+          }
+        }
+        .more {
+          margin-inline: auto;
+          display: flex;
+          @media screen and (max-width: $tablet) {
+            padding: 6px 0px;
+            font-weight: $font-weight-m;
+            color: $base-color-dark;
+          }
+
+          a {
+            text-align: center;
+            text-decoration: none;
+            color: $base-color;
+            align-self: center;
+            &:hover {
+              font-weight: $font-weight-m;
+              color: $base-color-dark;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      visibility: visible;
+      opacity: 100;
+      height: auto;
+
+      .views-row {
+        &:hover {
+          box-shadow: $box-shadow-dark;
+          .views-field-field-conference-image {
+            height: 200px;
+          }
+          .views-field-title {
+            font-size: 1.3rem;
+          }
+          .views-field-nothing {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+#featured-conferences {
+    .views-row {
+      .views-field-field-conference-image {
+        position: relative;
+        &::after {
+          background-image: url(../../img/featured.png);
+          background-repeat: no-repeat;
+          background-position: left top;
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .price {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: auto;
+          height: auto;
+          display: inline-block;
+          background: $bg-trans-black;
+          padding: 2px 12px;
+          color: $white;
+          border-radius: $box-radius;
+          box-shadow: 0 0 2px $white;
+        }
+      }
+    }
+}

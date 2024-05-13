@@ -1,0 +1,334 @@
+.page-wrapper *:focus, .ui-dialog *:focus {
+  outline: none;
+  box-shadow: inherit;
+}
+
+.conferences h2 {
+  font-weight: 500;
+  text-align: center;
+}
+.conferences .field--name-body {
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 70px;
+  color: #404550;
+}
+.conferences .conference__tabs {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  width: 92%;
+  margin: 0 auto;
+  padding-left: 20px;
+  border-bottom: 2px solid #3092cf;
+}
+.conferences .conference__tabs .conference__title {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3092cf;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  padding-inline: 16px;
+}
+@media screen and (max-width: 699px) {
+  .conferences .conference__tabs .conference__title {
+    font-size: 1rem;
+  }
+}
+.conferences .conference__tabs .conference__title.active {
+  position: relative;
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #404550;
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 699px) {
+  .conferences .conference__tabs .conference__title.active {
+    font-size: 1.2rem;
+  }
+}
+.conferences .conference__tabs .conference__title.active::after {
+  background-image: url(../../img/arrow.jpg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  display: block;
+  content: " ";
+  left: 50%;
+  bottom: -32.5px;
+}
+@media screen and (max-width: 1099px) {
+  .conferences .conference__tabs .conference__title.active::after {
+    bottom: -31px;
+  }
+}
+@media screen and (max-width: 699px) {
+  .conferences .conference__tabs .conference__title.active::after {
+    bottom: -32px;
+  }
+}
+.conferences .conference__tabs .conference__title:hover {
+  cursor: pointer;
+  color: #2377ab;
+  background-color: #f9f5f5;
+}
+.conferences .conference__content {
+  display: none;
+  margin-top: 25px;
+}
+.conferences .conference__content .js-carousel .slick-list {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.conferences .conference__content .js-carousel .slick-arrow {
+  width: 30px;
+  align-self: center;
+  color: transparent;
+}
+@media screen and (max-width: 850px) {
+  .conferences .conference__content .js-carousel .slick-arrow {
+    display: none !important;
+  }
+}
+.conferences .conference__content .js-carousel .slick-prev::before {
+  background-image: url(../../img/left-arrow-gray.jpg);
+  background-repeat: no-repeat;
+  width: 66px;
+  height: 32px;
+  display: block;
+  color: inherit;
+  content: " ";
+}
+.conferences .conference__content .js-carousel .slick-prev:hover::before, .conferences .conference__content .js-carousel .slick-prev:focus::before {
+  background-image: url(../../img/left-arrow-blue.jpg);
+}
+.conferences .conference__content .js-carousel .slick-next::before {
+  background-image: url(../../img/right-arrow-gray.jpg);
+  background-repeat: no-repeat;
+  width: 66px;
+  height: 32px;
+  display: block;
+  color: inherit;
+  content: " ";
+}
+.conferences .conference__content .js-carousel .slick-next:hover::before, .conferences .conference__content .js-carousel .slick-next:focus::before {
+  background-image: url(../../img/right-arrow-blue.jpg);
+}
+.conferences .conference__content .js-carousel .slick-dots li {
+  margin-inline: 8px;
+}
+.conferences .conference__content .js-carousel .slick-dots li button::before {
+  font-size: 80px;
+  color: transparent;
+  opacity: 1;
+  border: 1px solid #2377ab;
+  line-height: 24px;
+  border-radius: 50%;
+}
+.conferences .conference__content .js-carousel .slick-dots li.slick-active button::before {
+  color: #2377ab;
+  opacity: 1;
+  border: none;
+}
+.conferences .conference__content .views-row {
+  width: 361px;
+  margin: 0 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s;
+  border-radius: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.conferences .conference__content .views-row .views-field-field-conference-image {
+  height: 245px;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+.conferences .conference__content .views-row .views-field-field-conference-image .field-content {
+  background-image: url(../../img/no-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 850px) {
+  .conferences .conference__content .views-row .views-field-field-conference-image .field-content {
+    background-size: contain;
+  }
+}
+.conferences .conference__content .views-row .views-field-field-conference-image img {
+  width: 100%;
+  display: block;
+  min-height: 240px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.conferences .conference__content .views-row .views-field-field-conference-image .price {
+  display: none;
+}
+.conferences .conference__content .views-row .views-field-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 15px;
+  color: #404550;
+  padding: 15px 10px 5px 5px;
+  min-height: 60px;
+}
+.conferences .conference__content .views-row .views-field-field-conference-tags {
+  background-image: url(../../img/tags.jpg);
+  white-space: nowrap;
+  width: 68%;
+  overflow: hidden;
+}
+.conferences .conference__content .views-row .views-field-field-date {
+  background-image: url(../../img/date.jpg);
+}
+.conferences .conference__content .views-row .views-field-field-place {
+  background-image: url(../../img/location.jpg);
+  white-space: nowrap;
+  width: 68%;
+  overflow: hidden;
+}
+.conferences .conference__content .views-row .views-field-field-conference-tags,
+.conferences .conference__content .views-row .views-field-field-date,
+.conferences .conference__content .views-row .views-field-field-place {
+  color: #7C8993;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  padding: 5px 0px 5px 35px;
+  background-position-y: 10px;
+  margin-left: 15px;
+}
+.conferences .conference__content .views-row .views-field-field-place {
+  padding-bottom: 15px;
+}
+.conferences .conference__content .views-row .views-field-nothing {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .conferences .conference__content .views-row .views-field-nothing {
+    display: block;
+  }
+}
+.conferences .conference__content .views-row .views-field-nothing .field-content {
+  display: flex;
+  align-items: center;
+}
+.conferences .conference__content .views-row .views-field-nothing .like {
+  background-image: url(../../img/like.jpg);
+}
+.conferences .conference__content .views-row .views-field-nothing .like:hover {
+  background-image: url(../../img/like-blue.jpg);
+}
+.conferences .conference__content .views-row .views-field-nothing .download {
+  background-image: url(../../img/download.jpg);
+}
+.conferences .conference__content .views-row .views-field-nothing .download:hover {
+  background-image: url(../../img/download-blue.jpg);
+}
+.conferences .conference__content .views-row .views-field-nothing .share {
+  background-image: url(../../img/share.jpg);
+}
+.conferences .conference__content .views-row .views-field-nothing .share:hover {
+  background-image: url(../../img/share-blue.jpg);
+}
+.conferences .conference__content .views-row .views-field-nothing .like,
+.conferences .conference__content .views-row .views-field-nothing .download,
+.conferences .conference__content .views-row .views-field-nothing .share {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 15%;
+  height: 22px;
+}
+@media screen and (max-width: 850px) {
+  .conferences .conference__content .views-row .views-field-nothing .like,
+  .conferences .conference__content .views-row .views-field-nothing .download,
+  .conferences .conference__content .views-row .views-field-nothing .share {
+    background-size: 20px;
+  }
+}
+.conferences .conference__content .views-row .views-field-nothing .like span,
+.conferences .conference__content .views-row .views-field-nothing .download span,
+.conferences .conference__content .views-row .views-field-nothing .share span {
+  visibility: hidden;
+}
+.conferences .conference__content .views-row .views-field-nothing .like a,
+.conferences .conference__content .views-row .views-field-nothing .download a,
+.conferences .conference__content .views-row .views-field-nothing .share a {
+  display: none;
+}
+.conferences .conference__content .views-row .views-field-nothing .more {
+  margin-inline: auto;
+  display: flex;
+}
+@media screen and (max-width: 850px) {
+  .conferences .conference__content .views-row .views-field-nothing .more {
+    padding: 6px 0px;
+    font-weight: 500;
+    color: #2377ab;
+  }
+}
+.conferences .conference__content .views-row .views-field-nothing .more a {
+  text-align: center;
+  text-decoration: none;
+  color: #3092cf;
+  align-self: center;
+}
+.conferences .conference__content .views-row .views-field-nothing .more a:hover {
+  font-weight: 500;
+  color: #2377ab;
+}
+.conferences .conference__content:hover {
+  visibility: visible;
+  opacity: 100;
+  height: auto;
+}
+.conferences .conference__content:hover .views-row:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.conferences .conference__content:hover .views-row:hover .views-field-field-conference-image {
+  height: 200px;
+}
+.conferences .conference__content:hover .views-row:hover .views-field-title {
+  font-size: 1.3rem;
+}
+.conferences .conference__content:hover .views-row:hover .views-field-nothing {
+  display: block;
+}
+
+#featured-conferences .views-row .views-field-field-conference-image {
+  position: relative;
+}
+#featured-conferences .views-row .views-field-field-conference-image::after {
+  background-image: url(../../img/featured.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#featured-conferences .views-row .views-field-field-conference-image .price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 12px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #fff;
+}
+
+/*# sourceMappingURL=conference.css.map */

@@ -1,0 +1,4 @@
+services:
+  review_list.api_connector:
+    class: Drupal\review_list\ReviewAPIConnector
+    arguments: ['@http_client_factory'] 

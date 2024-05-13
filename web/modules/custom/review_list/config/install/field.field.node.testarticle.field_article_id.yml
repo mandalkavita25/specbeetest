@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_id
+    - node.type.testarticle
+  enforced:
+    module:
+      - review_list
+id: node.testarticle.field_article_id
+field_name: field_article_id
+entity_type: node
+bundle: testarticle
+label: 'Article Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

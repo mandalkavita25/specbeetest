@@ -1,0 +1,9 @@
+name: Specbee Test
+type: theme
+base theme: claro
+description: 'A clean, accessible, and flexible Drupal front-end theme.'
+alt text: 'Screenshot of Specbee Test, Drupal front-end theme.'
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10
+libraries:
+  - specbeetest/specbeetest-styling

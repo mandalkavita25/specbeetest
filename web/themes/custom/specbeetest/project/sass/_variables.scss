@@ -1,0 +1,33 @@
+$base-color: #3092cf;
+$base-color-dark: #2377ab;
+$gray-color: #404550;
+$light-gray: #7C8993;
+$ofwhite-color: #f9f5f5;
+$white: #fff;
+$border-color: rgba(0, 0, 0, 0.1);
+$border-gray: 1px solid $border-color;
+$border-blue: 1px solid $base-color-dark;
+$box-shadow: 0 0 20px $border-color;
+$box-shadow-dark: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+$box-transition: box-shadow 0.5s;
+$box-radius: 5px;
+$tab-active-arrow-img: url(../../img/arrow.jpg);
+$no-content-img: url(../../img/no-image.jpg);
+$tag-icon: url(../../img/tags.jpg);
+$date-icon: url(../../img/date.jpg);
+$location-icon: url(../../img/location.jpg);
+$like-icon: url(../../img/like.jpg);
+$like-icon-blue: url(../../img/like-blue.jpg);
+$download-icon: url(../../img/download.jpg);
+$download-icon-blue: url(../../img/download-blue.jpg);
+$share-icon: url(../../img/share.jpg);
+$share-icon-blue: url(../../img/share-blue.jpg);
+$left-arrow-icon: url(../../img/left-arrow-gray.jpg);
+$left-arrow-icon-blue: url(../../img/left-arrow-blue.jpg);
+$right-arrow-icon: url(../../img/right-arrow-gray.jpg);
+$right-arrow-icon-blue: url(../../img/right-arrow-blue.jpg);
+
+$bg-trans-black: rgba(0,0,0,0.2);
+
+$font-weight-m: 500;
+$font-weight-mx: 600;

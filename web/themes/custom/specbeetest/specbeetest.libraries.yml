@@ -1,0 +1,29 @@
+specbeetest-styling:
+  version: 1.x
+  css:
+    theme:
+      project/css/conference.css: {}
+  js:
+    js/conference.js: {}
+  dependencies:
+    - core/jquery
+
+slick:
+  remote: https://kenwheeler.github.io/slick/
+  version: 1.x
+  license:
+    name: MIT
+    url: https://github.com/kenwheeler/slick/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    js/slick.min.js: { weight: -3, minified: true }
+    js/slick.config.js: {}
+  css:
+    base:
+      project/css/slick.css: {}
+      project/css/slick-theme.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

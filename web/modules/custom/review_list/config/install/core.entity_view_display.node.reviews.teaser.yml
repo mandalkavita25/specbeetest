@@ -1,0 +1,35 @@
+uuid: e7a54f64-3179-4aea-bbbf-84183f88d87a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.reviews.body
+    - field.field.node.reviews.field_article
+    - node.type.reviews
+  module:
+    - text
+    - user
+  enforced:
+    module:
+      - review_list
+id: node.reviews.teaser
+targetEntityType: node
+bundle: reviews
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_article: true
