@@ -1,0 +1,16 @@
+name: drupal
+recipe: drupal10
+config:
+  webroot: web
+  php: '8.2'
+proxy:
+  phpmyadmin:
+    - phpmyadmin.lndo.site
+
+services:
+  appserver:
+    xdebug: true
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
