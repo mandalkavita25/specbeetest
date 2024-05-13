@@ -1,1 +1,2 @@
 # specbeetest
+Simple Test project.
